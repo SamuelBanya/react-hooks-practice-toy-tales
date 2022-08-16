@@ -4,7 +4,7 @@ function ToyCard({ toy, onDeleteToy, onUpdateToy }) {
   const { id, name, image, likes } = toy;
 
   function handleDeleteClick() {
-    fetch(`http://localhost:3001/toys/${id}`, {
+    fetch(`https://toy-tales-jsonserver.herokuapp.com/toys/${id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())
@@ -16,7 +16,7 @@ function ToyCard({ toy, onDeleteToy, onUpdateToy }) {
       likes: toy["likes"] + 1,
     };
 
-    fetch(`http://localhost:3001/toys/${id}`, {
+    fetch(`https://toy-tales-jsonserver.herokuapp.com/toys/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

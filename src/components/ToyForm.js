@@ -21,7 +21,7 @@ function ToyForm({ onAddToy }) {
       likes: 0,
     };
 
-    fetch("http://localhost:3001/toys", {
+    fetch("https://toy-tales-jsonserver.herokuapp.com/toys", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
