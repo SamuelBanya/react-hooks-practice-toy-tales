@@ -9,7 +9,7 @@ function App() {
   const [toys, setToys] = useState([]);
 
   useEffect(() => {
-    fetch("https://toy-tales-jsonserver.herokuapp.com/toys")
+    fetch("https://react-hooks-practice-toy-tales-jsonserver.onrender.com/toys")
       .then((response) => response.json())
       .then(setToys);
   }, []);

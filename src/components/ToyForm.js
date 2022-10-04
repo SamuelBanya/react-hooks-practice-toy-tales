@@ -21,12 +21,12 @@ function ToyForm({ onAddToy }) {
       likes: 0,
     };
 
-    fetch("https://toy-tales-jsonserver.herokuapp.com/toys", {
+    fetch("https://react-hooks-practice-toy-tales-jsonserver.onrender.com/toys", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newToy),
+        },
+        body: JSON.stringify(newToy),
     })
       .then((response) => response.json())
       .then(onAddToy);

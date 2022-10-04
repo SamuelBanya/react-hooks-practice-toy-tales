@@ -4,7 +4,7 @@ function ToyCard({ toy, onDeleteToy, onUpdateToy }) {
   const { id, name, image, likes } = toy;
 
   function handleDeleteClick() {
-    fetch(`https://toy-tales-jsonserver.herokuapp.com/toys/${id}`, {
+    fetch(`https://react-hooks-practice-toy-tales-jsonserver.onrender.com/toys/${id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())
@@ -16,7 +16,7 @@ function ToyCard({ toy, onDeleteToy, onUpdateToy }) {
       likes: toy["likes"] + 1,
     };
 
-    fetch(`https://toy-tales-jsonserver.herokuapp.com/toys/${id}`, {
+    fetch(`https://react-hooks-practice-toy-tales-jsonserver.onrender.com/toys/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
